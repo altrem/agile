@@ -33,22 +33,17 @@ namespace Agile {
                 return;
             }
 
-            foreach (var col in this.columns) {
-                if (col.id == column_id) {
-                    col.name = new_column_name;
-                    return;
-                }
+            Column ? found_column = Collections.get_first<Column>(Collections.where<Column>(this.columns, (col) => col.id == column_id));
+            if (found_column == null) {
+                return;
             }
+
+            found_column.name = new_column_name;
         }
 
         public void change_column_position (int column_id, int new_column_position) {
 
-            Column ? found_column = null;
-            foreach (var col in this.columns) {
-                if (col.id == column_id) {
-                    found_column = col;
-                }
-            }
+            Column ? found_column = Collections.get_first<Column>(Collections.where<Column>(this.columns, (col) => col.id == column_id));
 
             if (found_column == null) {
                 return;
@@ -64,13 +59,7 @@ namespace Agile {
                 return false;
             }
 
-            foreach (var col in this.columns) {
-                if (col.name == column_name) {
-                    return false;
-                }
-            }
-
-            return true;
+            return Collections.any<Column> (this.columns, (col) => col.name == column_name);
         }
     }
 }
