@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Agile
+GenericName=Kanban Board
+Comment=Proves that we can use Vala and Gtk
+Categories=Development;
+Exec=com.github.altrem.agile
+Icon=application-default-icon
+Terminal=false
+Type=Application
+Keywords=Kanban;Trello;Jira

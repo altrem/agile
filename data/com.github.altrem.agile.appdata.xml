@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2018 Alexandre Tremblay <tremblay.alexandre.1000@gmail.com> -->
+<component type="desktop">
+  <id>com.github.altrem.agile</id>
+  <metadata_license>CC0</metadata_license>
+  <name>Agile</name>
+  <summary>Organize Your Tasks With Flexibility</summary>
+  <description>
+    <p>TBD.</p>
+  </description>
+  <custom>
+    <value key="x-appcenter-color-primary">#603461</value>
+    <value key="x-appcenter-color-primary-text">rgb(255, 255, 255)</value>
+    <value key="x-appcenter-suggested-price">4</value>
+  </custom>
+</component>
