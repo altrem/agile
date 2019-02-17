@@ -1,0 +1,16 @@
+Source: com.github.altrem.agile
+Section: x11
+Priority: extra
+Maintainer: Alexandre Tremblay <tremblay.alexandre.1000@gmail.com>
+Build-Depends: debhelper (>= 10.5.1),
+               gettext,
+               libgtk-3-dev (>= 3.10),
+               meson,
+               valac (>= 0.28.0)
+Standards-Version: 4.1.1
+
+Package: com.github.altrem.agile
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Kanban Board
+ This is a simple and fast Trello-like application for elementary OS.

@@ -1,26 +1,22 @@
-public class MyApp : Gtk.Application {
+namespace Agile {
+    public class AgileApp : Gtk.Application {
 
-    public MyApp () {
-        Object (
-            application_id: "com.github.altrem.agile",
-            flags : ApplicationFlags.FLAGS_NONE
-        );
-    }
+        public AgileApp () {
+            Object (
+                application_id: "com.github.altrem.agile",
+                flags : ApplicationFlags.FLAGS_NONE
+            );
+        }
 
-    protected override void activate () {
-        var main_window = new Gtk.ApplicationWindow (this);
-        main_window.default_height = 640;
-        main_window.default_width = 1280;
-        main_window.title = "Agile";
+        protected override void activate () {
+            var main_window = new MainWindow (this);
+            main_window.show_all ();
+        }
 
-        var hello_label = new Gtk.Label ("Hello World!");
-        
-        main_window.add (hello_label);
-        main_window.show_all ();
-    }
-
-    public static int main (string[] args) {
-        var app = new MyApp ();
-        return app.run (args);
+        public static int main (string[] args) {
+            var app = new AgileApp ();
+            return app.run (args);
+        }
     }
 }
+
