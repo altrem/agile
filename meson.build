@@ -8,6 +8,8 @@ executable(
     'src/Utils/CollectionUtils.vala',
     'src/Widgets/MainWindow.vala',
     'src/Widgets/HeaderBar.vala',
+    'src/Widgets/WelcomeView.vala',
+    'src/Services/BoardService.vala',
     dependencies: [
         dependency('gtk+-3.0'),
         dependency('gee-0.8'),

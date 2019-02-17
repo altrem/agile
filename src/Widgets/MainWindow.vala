@@ -15,11 +15,9 @@ namespace Agile {
             main_grid.row_spacing = 6;
             main_grid.expand = true;
 
-            var welcome = new Granite.Widgets.Welcome ("No Board Open", "Create or open a board to start organizing your tasks.");
-            welcome.append ("document-new", "New Board", "Create a new Kanban Board.");
-            welcome.append ("text-x-source", "Import A Board", "Import a Board from a file on your hard drive.");
-
+            var welcome = new WelcomeView ();
             main_grid.add (welcome);
+            
             this.add (main_grid);
         }
     }
